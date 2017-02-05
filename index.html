@@ -321,6 +321,8 @@ function initMap() {
    var markpos=[];
    var htmlcode=[];
    var infowindow=[];
+   var commentwindow=[];
+   var comments=[];
    var oldwin="";
    var votecount=[];
    var noteavg=[];
@@ -337,12 +339,17 @@ for (var locId in data) {
 		map: map});*/
 	
 	votecount[i] = 0
+	var ccc = ""
 	var totalnote = 0
+	comments[i]="<h1>Reviews</h1><br>"
 	for(var review in data[locId].reviews){
 		votecount[i]++;
 		totalnote= totalnote + parseInt(data[locId].reviews[review].note);
+		ccc = "<b>Note:</b> "+data[locId].reviews[review].note+"   -<b> Review:</b> "+data[locId].reviews[review].review+"<br>";
+		comments[i] += ccc;
+		console.log(comments[i]);
 	}
-	console.log("votecount: "+votecount[i]+" -- "+totalnote);
+	//console.log("votecount: "+votecount[i]+" -- "+totalnote);
 	noteavg[i] = Math.round(totalnote / votecount[i]);
 	console.log(noteavg[i]);
 	switch(noteavg[i]){
@@ -386,6 +393,10 @@ for (var locId in data) {
   '</div>'+
 
   '</div>';
+	commentwindow[i]= new google.maps.InfoWindow({
+		content: comments[i],
+		maxWidth: 500
+	});	
 
 	infowindow[i] = new google.maps.InfoWindow({
 		content: htmlcode[i],
@@ -398,7 +409,14 @@ for (var locId in data) {
 		if(oldwin!=""){
 		oldwin.close();
 		}
-		oldwin = infowindow[this.index]
+		oldwin = infowindow[this.index];
+	});
+	marker[i].addListener('dblclick',function(){
+		commentwindow[this.index].open(map,marker[this.index]);
+		if(oldwin!=""){
+		oldwin.close();
+		}
+		oldwin = commentwindow[this.index];
 	});
 
     }

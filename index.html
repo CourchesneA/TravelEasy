@@ -1,0 +1,406 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Heera HTML5 Template by Jewel Theme</title>
+
+	<meta name="description" content="Heera HTML5 Template by Jewel Theme" >
+
+	<meta name="author" content="Jewel Theme">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+	<!-- Bootstrap  -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- icon fonts font Awesome -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Import Magnific Pop Up Styles -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+	<!-- Import Custom Styles -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<!-- Import Animate Styles -->
+	<link href="assets/css/animate.min.css" rel="stylesheet">
+
+	<!-- Import owl.carousel Styles -->
+	<link href="assets/css/owl.carousel.css" rel="stylesheet">
+
+	<!-- Import Custom Responsive Styles -->
+	<link href="assets/css/responsive.css" rel="stylesheet">
+
+	
+	<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  		<![endif]-->
+
+  	</head>
+  	<body class="header-fixed-top" >
+
+  		<div id="page-top" class="page-top"></div><!-- /.page-top -->
+
+  		
+
+
+  		<section id="site-banner" class="site-banner text-center">
+  			<div class="container">
+  				<div class="site-logo">
+  					<a href="./"><img src="wheeleasy.JPG" alt="Site Logo"></a>
+                                        Wheel Easy: Making sure you have a wheely great stay!
+                                      
+  				</div><!-- /.site-logo -->
+  			</div><!-- /.container -->
+  		</section><!-- /#site-banner -->
+
+
+
+  		<header id="main-menu" class="main-menu">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-sm-7">
+  						<div class="navbar-header">
+  							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+  								<i class="fa fa-bars"></i>
+  							</button>
+                <div class="menu-logo">
+                  <a href="./"><img src="wheeleasy.JPG" alt="menu Logo"></a>
+                </div><!-- /.menu-logo -->
+              </div>
+              <nav id="menu" class="menu collapse navbar-collapse">
+               <ul id="headernavigation" class="menu-list nav navbar-nav">
+                <li class="active"><a href="#page-top">Home</a></li>
+                
+                
+                <li><a href="#contact">Mission</a></li>
+                
+                <li><a href="#contact">Contact</a></li>
+              </ul><!-- /.menu-list -->
+            </nav><!-- /.menu-list -->
+          </div>
+
+          <div class="col-sm-5">
+            <div class="menu-search pull-right">
+             <form role="search" class="search-form" action="#" method="get">
+              <input class="search-field" type="text" name="s" id="s" placeholder="Search Here" required>
+              <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+            </form><!-- /.search-form -->
+          </div><!-- /.menu-search -->
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </header><!-- /#main-menu -->
+
+
+
+  
+<section id="contact" class="contact">
+  <div class="contact-area">
+    <!-- Google Map Section -->
+    <div id="google-map" class="google-map">
+      <div class="map-container" > 
+        <div id="googleMaps"  class="google-map-container">
+        </div>
+      </div><!-- /.map-container -->
+    </div><!-- /#google-map-->
+    <!-- Google Map Section End -->
+
+    <div id="message-details" class="message-details">
+      <div class="container">
+        <form id="myForm" class="message-form">
+          <div class="row">
+            <div class="col-sm-6">
+             <!-- <input id="loc" class="form-control" name="loc" type="loc" value="" size="30" aria-required="true" placeholder="location" title="location"  required>-->
+	      <select class="form-control" name="loc" id="loc" title="Location">
+		<option value="1"> Renaissance Montreal Downtown Hotel </option>
+		<option value="2"> 1193 Place Phillips, Montréal </option>
+		<option value="3"> Hotel Novotel Montreal Centre </option>
+		<option value="4"> Holiday Inn Montreal Centreville Downtown </option>
+		<option value="5"> W Montreal</option>
+		<option value="6"> L’hôtel Le Germain Montréal </option>
+		<option value="7"> Montreal Marriott Château Champlain </option>
+		<option value="8"> Sandman Hotel Longueuil </option>
+		<option value="9"> Hotel Dorion </option>
+		<option value="10"> Hotel Epic Montreal </option>
+              
+              <input id="email" class="form-control" name="email" type="email" value="" size="30" aria-required="true" placeholder="Email*" title="Email"  required>
+              <select class="form-control" id="note" name="note"  title="Note">
+		<option value="1">1 - Not accessible</option>
+		<option value="2">2 - Accessible entrance</option>
+		<option value="3">3 - Accessible entrance and room</option>
+		<option value="4">4 - Accessible entrance, room and bathing</option>
+	     
+            </div>
+            <div class="col-sm-6">
+              <textarea id="review" class="form-control" name="review" cols="45" rows="8" aria-required="true" placeholder="review" title="review"  required></textarea>
+              <button name="submit" class="btn btn-lg full-width" type="button" onclick="saveReview();" id="submit">Submit</button>
+            </div>
+          </div><!-- /.row -->
+        </form><!-- /#commentform -->
+      </div><!-- /.container -->
+    </div><!-- /.message-details -->
+  </div><!-- /.contact-area -->
+</section><!-- /#contact -->
+<section id="portfolio" class="portfolio text-center">
+ <div class="container">
+  <div class="portfolio-area">
+    <div class="portfolio-top">
+      <h2 class="portfolio-title">We recommend visiting</h2>
+      <p class="title-description">Wheelchair accessible attractions</p>
+      <div class="slide-nav-container">
+        <a class="slide-nav left slide-left post-prev" data-slide="post-prev"><i class="fa fa-angle-left"></i></a>
+        <a class="slide-nav right slide-right post-next" data-slide="post-next"><i class="fa fa-angle-right"></i></a>
+      </div>
+    </div><!-- /.portfolio-top -->
+
+    <div id="portfolio-slider" class="portfolio-slider owl-carousel owl-theme">
+      <div class="item">
+        <div class="item-image">
+          <img src="muc.JPG" alt="Portfolio Image">
+        </div>
+        <span class="item-title">Montreal Underground City</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="prta.JPG" alt="Portfolio Image">
+        </div>
+        <span class="item-title">Planetarium Rio Tinto Alcan</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="jbm.JPG" alt="Portfolio Image">
+        </div>
+        <span class="item-title">Jardin botanique</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="cds.JPG" alt="Portfolio Image">
+        </div>
+        <span class="item-title">Centre des sciences de Montreal</span>
+      </div>
+
+    </div>
+  </div><!-- /.portfolio-area -->
+</div><!-- /.container -->
+</section><!-- /#portfolio -->
+
+
+<div id="scroll-to-top" class="scroll-to-top">
+  <span>
+    <i class="fa fa-chevron-up"></i>    
+  </span>
+</div><!-- /#scroll-to-top -->
+
+
+
+<!-- Include modernizr-2.8.3.min.js -->
+<script src="assets/js/modernizr-2.8.3.min.js"></script>
+
+<!-- Include jquery.min.js plugin -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Include magnific-popup.min.js -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+<!-- Google Maps Script -->
+<!--<script src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeWt7470vCpA0a47X5k-pLOqt1i-3ilZ8&callback=getData">
+    </script>
+
+<!-- Gmap3.js For Static Maps -->
+<script src="assets/js/gmap3.js"></script>
+
+<!-- Javascript Plugins  -->
+<script src="assets/js/plugins.js"></script>
+
+<!-- Custom Functions  -->
+<script src="assets/js/functions.js"></script>
+
+<script src="assets/js/wow.min.js"></script>
+
+<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+<script>
+ function saveReview(){
+
+/**
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBPCP_VnrWuDRck-h0ZVeeWQG3jnYiXaEM",
+    authDomain: "wheeleasy-37531.firebaseapp.com",
+    databaseURL: "https://wheeleasy-37531.firebaseio.com",
+    storageBucket: "wheeleasy-37531.appspot.com",
+    messagingSenderId: "248790963677"
+  };
+  firebase.initializeApp(config);
+*/
+  // Get a reference to the database service
+  var database = firebase.database();
+  var loc = document.getElementById("loc").value;
+  var note = document.getElementById("note").value;
+  var review = document.getElementById("review").value;
+  var email = document.getElementById("email").value;
+
+  writeReviewData(loc, email, note, review);
+
+
+  alert("Done");
+  window.location.reload();
+ }
+
+  function writeReviewData(loc, email,note, review) {
+	  firebase.database().ref('locations/'+loc+"/reviews").push({
+	    email: email,
+	    note: note,
+	    review: review
+	  });
+  }
+
+  var data = {};
+  function setData(snap){
+    data = snap;
+    console.log(snap);
+  }
+
+  function getData(){
+
+  var config = {
+    apiKey: "AIzaSyBPCP_VnrWuDRck-h0ZVeeWQG3jnYiXaEM",
+    authDomain: "wheeleasy-37531.firebaseapp.com",
+    databaseURL: "https://wheeleasy-37531.firebaseio.com",
+    storageBucket: "wheeleasy-37531.appspot.com",
+    messagingSenderId: "248790963677"
+  };
+  firebase.initializeApp(config);
+
+
+     firebase.database().ref('locations/').once('value').then(function(snapshot){
+	data = snapshot.val();
+	console.log(data)
+	initMap();
+});
+
+//initMap();
+  }
+
+
+
+var locationData = {
+ 
+	1: {name: "Renaissance Montreal Downtown Hotel", pos: [45.5027146, -73.56938760000003]}, 
+	2: {name: "1193 Place Philips", pos: [45.5035974, -73.56736799999999]}, 
+	3: {name: "Hotel Novotel Montreal Centre", pos: [45.4969553, -73.57342069999999]}, 
+	4: {name: "Holiday Inn Montreal Centreville Downtown", pos:[45.50664949999999, -73.55983520000001] }, 
+	5: {name: "W Montreal", pos: [45.5024245, -73.57442019999996]}, 
+	6: {name: "Montreal Marriott Château Champlain", pos: [45.4975927, -73.56745890000002]}, 
+	7: {name: "Sandman Hotel Longueil", pos: [45.52495529999999, -73.52319849999998]}, 
+	8: {name: "Hotel Dorion", pos: [45.5242543, -73.55253060000001]}, 
+	9: {name: "Hotel Epic Montreal", pos: [45.5184608, -73.5712317]} 
+}
+	
+
+
+function initMap() {
+  var current_position = {lat: 45.5027146, lng: -73.56938};
+  var map = new google.maps.Map(document.getElementById('googleMaps'), {
+    zoom: 14,
+    center: current_position,
+    scrollwheel: false
+  });
+        console.log("Pre loop"); 
+   var i=0;
+   var marker=[];
+   var markpos=[];
+   var htmlcode=[];
+   var infowindow=[];
+   var oldwin="";
+   var votecount=[];
+   var noteavg=[];
+   var colors=[];
+
+for (var locId in data) {
+    if (data.hasOwnProperty(locId)) {
+        console.log("Loop iteration"); 
+	console.log(data[locId].position[0]);
+	markpos[i] = { lat:data[locId].position[0], lng:data[locId].position[1]};
+	marker[i] = new google.maps.Marker({
+		position: markpos[i],
+		map: map});
+	marker[i].index = i;
+	
+	votecount[i] = 0
+	var totalnote = 0
+	for(var review in data[locId].reviews){
+		votecount[i]++;
+		console.log(">"+data[locId].reviews[review].note);
+		totalnote= totalnote + parseInt(data[locId].reviews[review].note);
+		console.log(">>"+totalnote);
+	}
+	console.log("votecount: "+votecount[i]+" -- "+totalnote);
+	noteavg[i] = Math.round(totalnote / votecount[i]);
+	console.log(noteavg[i]);
+	switch(noteavg[i]){
+		case 1:
+			colors[i]=' <i class="fa fa-square" style="color:rgb(255,0,0); font-size:25px;"></i>'
+			break;
+		case 2:
+			colors[i]=' <i class="fa fa-square" style="color:orange; font-size:25px;"></i>'
+			break;
+		case 3:
+			colors[i]=' <i class="fa fa-square" style="color:rgb(255,255,0); font-size:25px;"></i>';
+			break;
+		case 4:
+			colors[i]='<i class="fa fa-square" style="color:rgb(0,255,0); font-size:25px;"></i>';
+			break;	
+	}
+
+	htmlcode[i] = 
+  '<header>'+
+   '    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">' +
+   '<style>'+
+   '</style>'+
+
+  '<div id="content" ">'+
+    '<h2 id="firstHeading" class="firstHeading">'+data[locId].name+'</h1>'+
+    '<div id="bodyContent">'+
+    colors[i] +
+      '<p style="display:inline; "> '+votecount[i]+' vote </p>'+
+  '</div>'+
+
+  '</div>';
+
+
+	infowindow[i] = new google.maps.InfoWindow({
+		content: htmlcode[i],
+		maxWidth: 200
+	});
+
+	marker[i].addListener('click',function(){
+		infowindow[this.index].open(map,marker[this.index]);
+		if(oldwin!=""){
+		oldwin.close();
+		}
+		oldwin = infowindow[this.index]
+	});
+
+    }
+    i++;
+}
+
+
+}
+
+
+</script>
+
+</body>
+</html>
+

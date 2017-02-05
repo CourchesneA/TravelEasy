@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Heera HTML5 Template by Jewel Theme</title>
+	<title>Wheel Easy</title>
 
 	<meta name="description" content="Heera HTML5 Template by Jewel Theme" >
 
@@ -292,7 +292,7 @@
   }
 
 
-
+/*
 var locationData = {
  
 	1: {name: "Renaissance Montreal Downtown Hotel", pos: [45.5027146, -73.56938760000003]}, 
@@ -304,7 +304,7 @@ var locationData = {
 	7: {name: "Sandman Hotel Longueil", pos: [45.52495529999999, -73.52319849999998]}, 
 	8: {name: "Hotel Dorion", pos: [45.5242543, -73.55253060000001]}, 
 	9: {name: "Hotel Epic Montreal", pos: [45.5184608, -73.5712317]} 
-}
+}*/
 	
 
 
@@ -325,42 +325,52 @@ function initMap() {
    var votecount=[];
    var noteavg=[];
    var colors=[];
+   var icons=[];
 
 for (var locId in data) {
     if (data.hasOwnProperty(locId)) {
         console.log("Loop iteration"); 
 	console.log(data[locId].position[0]);
 	markpos[i] = { lat:data[locId].position[0], lng:data[locId].position[1]};
-	marker[i] = new google.maps.Marker({
+	/**marker[i] = new google.maps.Marker({
 		position: markpos[i],
-		map: map});
-	marker[i].index = i;
+		map: map});*/
 	
 	votecount[i] = 0
 	var totalnote = 0
 	for(var review in data[locId].reviews){
 		votecount[i]++;
-		console.log(">"+data[locId].reviews[review].note);
 		totalnote= totalnote + parseInt(data[locId].reviews[review].note);
-		console.log(">>"+totalnote);
 	}
 	console.log("votecount: "+votecount[i]+" -- "+totalnote);
 	noteavg[i] = Math.round(totalnote / votecount[i]);
 	console.log(noteavg[i]);
 	switch(noteavg[i]){
 		case 1:
-			colors[i]=' <i class="fa fa-square" style="color:rgb(255,0,0); font-size:25px;"></i>'
+			colors[i]=' <i class="fa fa-square" style="color:rgb(255,0,0); font-size:25px;"></i>';
+			icons[i] = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
 			break;
 		case 2:
-			colors[i]=' <i class="fa fa-square" style="color:orange; font-size:25px;"></i>'
+			colors[i]=' <i class="fa fa-square" style="color:orange; font-size:25px;"></i>';
+			icons[i] = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png";
+			
 			break;
 		case 3:
 			colors[i]=' <i class="fa fa-square" style="color:rgb(255,255,0); font-size:25px;"></i>';
+			icons[i] = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
 			break;
 		case 4:
 			colors[i]='<i class="fa fa-square" style="color:rgb(0,255,0); font-size:25px;"></i>';
+			icons[i] = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
 			break;	
 	}
+	marker[i] = new google.maps.Marker({
+		position: markpos[i],
+		map: map,
+		icon: icons[i]});
+	marker[i].index = i;
+
+
 
 	htmlcode[i] = 
   '<header>'+
@@ -372,16 +382,16 @@ for (var locId in data) {
     '<h2 id="firstHeading" class="firstHeading">'+data[locId].name+'</h1>'+
     '<div id="bodyContent">'+
     colors[i] +
-      '<p style="display:inline; "> '+votecount[i]+' vote </p>'+
+      '<p style="display:inline;" id="commenters"> '+votecount[i]+' vote </p>'+
   '</div>'+
 
   '</div>';
-
 
 	infowindow[i] = new google.maps.InfoWindow({
 		content: htmlcode[i],
 		maxWidth: 200
 	});
+
 
 	marker[i].addListener('click',function(){
 		infowindow[this.index].open(map,marker[this.index]);
